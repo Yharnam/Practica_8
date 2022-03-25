@@ -24,7 +24,7 @@ public class caballero extends combate {
 
 	
         public void esquivar() {
-		 System.out.println (this.nombre + " ¡escapa del ataque del oponente! ");
+		 System.out.println (this.nombre + " ¡Escapo de sus manos, igual que como lo hizo su ex...! ");
 	}
         
     

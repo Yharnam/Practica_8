@@ -73,10 +73,10 @@ public class combate {
 				daño = 0;
 			}
 				 Vida_restante = vida-daño; // Calcular el valor de vida restante por ronda
-				 System.out.println (this.nombre + " hizo una defensa y recibió " + daño + " daño! "); // ¿Cuánto daño se imprimió?
+				 System.out.println (this.nombre + " Logro defenderse pero recibio " + daño + " daño! "); // ¿Cuánto daño se imprimió?
 				if(Vida_restante<0)
 					Vida_restante = 0;
-				 System.out.println (" resto " + Vida_restante + " salud del punto "); // imprime el estado restante
+				 System.out.println (" resto " + Vida_restante + " de puntos de vida "); // imprime el estado restante
 				 vida = Vida_restante; // vida actual
 		}else {
 			
@@ -86,14 +86,14 @@ public class combate {
 	public boolean muerte() {
 		boolean muerte = true; // Inicialización, viva
 		 if (vida <= 0) {// asesinado si el valor de la vida es menor o igual a 0
-			 System.out.println (this.nombre + " Muere, game over! ");
+			 System.out.println (this.nombre + " Y Se fue a visitar a diosito! ");
 			muerte = false;
 		}
 		 return muerte; // Regreso al estado de supervivencia
 	}
 	 // Sin golpe, función de escape
 	public void esquivar() {
-		 System.out.println ("No hit" + this.nombre + " ¡Evítalo! ");
+		 System.out.println ("Ni un brillo pelao'" + this.nombre + " ¡Esquivo, Esquivo! ");
 	}
     
 }

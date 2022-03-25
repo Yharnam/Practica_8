@@ -26,7 +26,7 @@ public class Principal {
 		 String batalla = ""; // Declara la variable de batalla para seleccionar el proceso de batalla
 		 int numero = 0; // Para registrar el número de rondas
 		 // Solicita al jugador que elija
-		 System.out.println ("Seleccione un rol e ingrese el literal de rol: \n");
+		 System.out.println ("Seleccione un personaje e ingrese el literal de personaje: \n");
 		 System.out.println ("A: Guerrero");
 		 System.out.println ("B: Caballero");
 		 System.out.println ("C: Mago");
@@ -39,7 +39,7 @@ public class Principal {
 		 oponente = Entrada.nextLine (); // Obtener el oponente seleccionado por el jugador
 		 // Los personajes y los oponentes no pueden ser lo mismo
 		 if (rol.equals (oponente)) {// Comparación entre cadenas
-			 System.out.println ("\n Los roles y los oponentes no pueden ser iguales, elija otro oponente: \n");
+			 System.out.println ("\n Los personajes y los oponentes no pueden ser los mismos, eleji otro oponente che: \n");
 			 oponente = Entrada.nextLine (); // Recuperar al oponente seleccionado de la consola
 		}
 		/*
@@ -54,7 +54,7 @@ public class Principal {
 				 // int number = 0; // Para registrar el número de rondas
 				 while (computer.muerte () && guerrero.muerte ()) {// Ambos lados están vivos, el ciclo continúa
 					 numero ++; // Incremento en 1 para el número de rondas
-					 System.out.println (" # " + numero + "ronda: "); // Número de rondas de salida por ronda
+					 System.out.println ("\n # " + numero + "ronda: \n"); // Número de rondas de salida por ronda
 					 if (aciertos (guerrero.getH ()) == 1) {// El guerrero golpea la computadora
 						 computer.defensa (guerrero.getAtaque ()); // La computadora hace una defensa
 					}else {
@@ -75,7 +75,7 @@ public class Principal {
 				System.out.println ("Caballero vs Computadora\n");
 				 while (computer.muerte () && caballero.muerte ()) {// ambos lados están vivos, el ciclo continúa
 					 numero ++; // Incremento en 1 para el número de rondas
-					 System.out.println (" # " + numero + " ronda: "); // Número de rondas de salida por ronda
+					 System.out.println ("\n # " + numero + " ronda: \n"); // Número de rondas de salida por ronda
 					 if (aciertos (caballero.getH ()) == 1) {// El caballero golpea la computadora
                                              
                                              
@@ -98,7 +98,7 @@ public class Principal {
 				 System.out.println ("Mago vs Computadora\n");
 				 while (computer.muerte () && Mago.muerte ()) {// Ambas partes están vivas, el ciclo continúa
 					 numero ++; // Incremento en 1 para el número de rondas
-					 System.out.println (" # " + numero + " ronda: "); // Número de rondas de salida por ronda
+					 System.out.println ("\n # " + numero + " ronda: \n"); // Número de rondas de salida por ronda
 					 if (aciertos (Mago.getH ()) == 1) {// Mago golpea la computadora
 						 computer.defensa (Mago.getAtaque ()); // defensa de la computadora
 					}else {
@@ -119,7 +119,7 @@ public class Principal {
 				 System.out.println ("Guerrero vs Caballero\n");
 				 while (caballero.muerte () && guerrero.muerte ()) {// ambos lados están vivos, el ciclo continúa
 					 numero ++; // Incremento en 1 para el número de rondas
-					 System.out.println (" # " + numero + " ronda: "); // Número de rondas de salida por ronda
+					 System.out.println ("\n # " + numero + " ronda: \n"); // Número de rondas de salida por ronda
 					 if (aciertos (guerrero.getH ()) == 1) {// El guerrero golpea a el Caballero
 						 caballero.defensa (guerrero.getAtaque ()); // Defensa de Caballero
 					}else {
@@ -140,7 +140,7 @@ public class Principal {
 				 System.out.println ("Guerrero contra mago\n");
 				 while (Mago.muerte () && guerrero.muerte ()) {// Ambos lados están vivos, el ciclo continúa
 					 numero ++; // Incremento en 1 para el número de rondas
-					 System.out.println (" # " + numero + " ronda: "); // Número de rondas de salida por ronda
+					 System.out.println ("\n # " + numero + " ronda: \n"); // Número de rondas de salida por ronda
 					 if (aciertos (guerrero.getH ()) == 1) {// El guerrero golpea al mago
 						 Mago.defensa (guerrero.getAtaque ()); // Defensa de magos
 					}else {
@@ -161,7 +161,7 @@ public class Principal {
 				 System.out.println ("Caballero contra mago\n");
 				 while (Mago.muerte () && caballero.muerte ()) {// ambos lados o, el ciclo continúa
 					 numero ++; // Incremento en 1 para el número de rondas
-					 System.out.println (" # " + numero + " ronda: "); // Número de rondas de salida por ronda
+					 System.out.println ("\n # " + numero + " ronda: \n"); // Número de rondas de salida por ronda
 					 if (aciertos (caballero.getH ()) == 1) {// La caballería golpea al mago
 						 Mago.defensa (caballero.getAtaque ()); // Defensa de magos
 					}else {
@@ -182,7 +182,7 @@ public class Principal {
 	public static int aciertos(double hr) {
 		Random r = new Random();
 		 int result = 0; // significa que no hay ataque
-		 // generado aleatoriamente [0; 1], la probabilidad de ocurrencia de 0 es hora, la probabilidad de ocurrencia de 1 es 1 hora
+		
 		 int a = r.nextInt (100); // enteros generados aleatoriamente de [0,100), la probabilidad de que aparezca cada número es 1%
 		 if (a <(int) (hr * 100)) {// El primer intervalo numérico de hr * 100, la probabilidad
 			 result = 1; // significa ataque

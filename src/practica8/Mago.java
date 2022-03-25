@@ -43,7 +43,7 @@ public class Mago extends combate{
 	
 	
 	public void esquivar() {
-		 System.out.println (this.nombre + " ¡con la ayuda de los espiritus logro esquivar el ataque del oponente! ");
+		 System.out.println (this.nombre + " ¡con la ayuda de los espiritus logro esquivar el ataque del oponente ¡¡¡Asi como lo evitaron a el las chicas!!! ");
 	}
     
 }

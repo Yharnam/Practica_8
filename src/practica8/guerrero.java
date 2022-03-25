@@ -29,7 +29,7 @@ public class guerrero extends combate{
 	
 
 	public void esquivar() {
-		 System.out.println (this.nombre + " ¡rueda y logra esquivar! ");
+		 System.out.println (this.nombre + " ¡Sos muy lento che, ese churrito no me golpeara! ");
 	}
     
 }
